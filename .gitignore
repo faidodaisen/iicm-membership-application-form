@@ -1,0 +1,24 @@
+# Plugin zip builds
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# AI / Claude Code tool files
+.agent/
+.agents/
+.claude/
+.continue/
+.superpowers/
+skills-lock.json
+
+# Client documents (sensitive)
+*.pdf
+
+# WordPress uploads / generated
+iicm-membership/includes/lib/*.xlsx

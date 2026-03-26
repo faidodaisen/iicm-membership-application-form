@@ -1,0 +1,232 @@
+/* IICM Membership Form — Brand: #0078D4 / #E87722 */
+
+.iicm-form-wrap {
+    max-width: 760px;
+    margin: 40px auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 15px;
+    color: #1a1a2e;
+}
+
+/* Step indicator */
+.iicm-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+.iicm-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.45;
+    transition: opacity 0.2s;
+}
+.iicm-step.active, .iicm-step.done { opacity: 1; }
+.iicm-step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #e0edf8;
+    color: #0078D4;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #c2d9f0;
+    transition: background 0.2s, color 0.2s;
+}
+.iicm-step.active .iicm-step-num,
+.iicm-step.done .iicm-step-num {
+    background: #0078D4;
+    color: #fff;
+    border-color: #0078D4;
+}
+.iicm-step-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+    white-space: nowrap;
+}
+.iicm-step-divider {
+    flex: 1;
+    height: 2px;
+    background: #d0e4f5;
+    margin: 0 8px 20px;
+    min-width: 30px;
+}
+
+/* Form card */
+.iicm-form-step {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0,120,212,0.08);
+    padding: 36px 40px;
+}
+.iicm-section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0078D4;
+    margin: 0 0 28px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e8f3fc;
+}
+
+/* Fields */
+.iicm-field { margin-bottom: 20px; }
+.iicm-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 14px;
+}
+.iicm-required { color: #E87722; }
+.iicm-field input[type="text"],
+.iicm-field input[type="email"],
+.iicm-field input[type="url"],
+.iicm-field textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #d0d9e4;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #1a1a2e;
+    background: #fafcff;
+    box-sizing: border-box;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    font-family: inherit;
+}
+.iicm-field input:focus,
+.iicm-field textarea:focus {
+    outline: none;
+    border-color: #0078D4;
+    box-shadow: 0 0 0 3px rgba(0,120,212,0.12);
+    background: #fff;
+}
+.iicm-field input.iicm-error,
+.iicm-field textarea.iicm-error { border-color: #d93025; }
+.iicm-field-hint { color: #777; font-size: 12px; margin-top: 4px; }
+
+/* Grid */
+.iicm-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.iicm-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+@media (max-width: 600px) {
+    .iicm-row-2, .iicm-row-3 { grid-template-columns: 1fr; }
+    .iicm-form-step { padding: 24px 18px; }
+}
+
+/* Checkboxes / Radios */
+.iicm-checkbox-group,
+.iicm-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 16px;
+    background: #fafcff;
+    border: 1.5px solid #d0d9e4;
+    border-radius: 6px;
+}
+.iicm-checkbox-label,
+.iicm-radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: normal !important;
+    cursor: pointer;
+}
+.iicm-checkbox-label input,
+.iicm-radio-label input {
+    width: 16px;
+    height: 16px;
+    accent-color: #0078D4;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Correspondence address inline header */
+.iicm-correspondence-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+.iicm-correspondence-header > label:first-child {
+    margin-bottom: 0;
+}
+#correspondence-fields { margin-top: 0; }
+
+/* Declaration */
+.iicm-declaration-box {
+    background: #f0f7ff;
+    border-left: 4px solid #0078D4;
+    padding: 16px 20px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+.iicm-declaration-box p { margin: 0; }
+
+/* Nav buttons */
+.iicm-form-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid #eef2f8;
+}
+.iicm-btn {
+    padding: 11px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    font-family: inherit;
+}
+.iicm-btn:active { transform: scale(0.98); }
+.iicm-btn-next,
+.iicm-btn-submit { background: #0078D4; color: #fff; margin-left: auto; }
+.iicm-btn-next:hover,
+.iicm-btn-submit:hover { background: #005fa3; }
+.iicm-btn-secondary { background: #f0f4f8; color: #555; }
+.iicm-btn-secondary:hover { background: #e0e8f0; }
+.iicm-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Notices */
+.iicm-notice { padding: 12px 16px; border-radius: 6px; font-size: 14px; margin-bottom: 16px; }
+.iicm-notice-error { background: #fef2f2; border: 1px solid #fca5a5; color: #b91c1c; }
+
+/* Success */
+.iicm-success-wrap {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0,120,212,0.08);
+    padding: 60px 40px;
+    text-align: center;
+}
+.iicm-success-icon {
+    width: 64px; height: 64px;
+    background: #0078D4; color: #fff;
+    font-size: 32px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 24px;
+}
+.iicm-success-wrap h2 { color: #0078D4; font-size: 24px; margin-bottom: 12px; }
+.iicm-success-wrap p { color: #555; font-size: 16px; max-width: 480px; margin: 0 auto; line-height: 1.6; }
+
+/* Fee table */
+.iicm-fees-wrap { max-width: 700px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.iicm-fees-wrap h3 { color: #0078D4; margin-bottom: 12px; font-size: 17px; }
+.iicm-fees-table { width: 100%; border-collapse: collapse; margin-bottom: 28px; font-size: 14px; }
+.iicm-fees-table th { background: #0078D4; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+.iicm-fees-table td { padding: 10px 14px; border-bottom: 1px solid #e8edf3; }
+.iicm-fees-table tr:nth-child(even) td { background: #f5f9ff; }
+.iicm-fees-note { font-size: 13px; color: #666; font-style: italic; border-top: 1px solid #e8edf3; padding-top: 12px; }
