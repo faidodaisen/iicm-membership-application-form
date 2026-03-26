@@ -3,7 +3,7 @@
  * Plugin Name:  IICM Membership Application
  * Plugin URI:   https://fidodesign.net
  * Description:  Online membership application form for IICM Berhad with admin dashboard.
- * Version:      1.0.0
+ * Version:      1.0.1
  * Author:       fidodesign
  * Author URI:   https://fidodesign.net
  * License:      GPL-2.0+
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'IICM_MEMBERSHIP_VERSION',    '1.0.0' );
+define( 'IICM_MEMBERSHIP_VERSION', '1.0.1' );
 define( 'IICM_MEMBERSHIP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'IICM_MEMBERSHIP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
